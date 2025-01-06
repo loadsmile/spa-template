@@ -1,10 +1,16 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
 const Studio = () => {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(true);
+    setTimeout(() => setIsClicked(false), 2000);
+  };
 
   if (!t?.studio) return null;
 
@@ -44,16 +50,15 @@ const Studio = () => {
               <p className="text-gray-700">{t.studio.hours.weekends}</p>
             </div>
 
-            <a
-              href="https://api.whatsapp.com/send/?phone=351912030345"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-white px-8 py-3 rounded-full
-                hover:bg-opacity-90 transition-all duration-300 transform
-                hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+            <button
+              onClick={handleClick}
+              disabled={isClicked}
+              className={`inline-block px-8 py-3 rounded-full transition-all duration-300
+                ${isClicked ? 'bg-gray-300 text-gray-700' : 'bg-primary text-white hover:bg-opacity-90'}
+                transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg`}
             >
-              {t.buttons.visit}
-            </a>
+              {isClicked ? 'Request Sent!' : t.buttons.visit}
+            </button>
           </div>
         </div>
       </div>

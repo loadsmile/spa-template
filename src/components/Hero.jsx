@@ -1,10 +1,16 @@
-import { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
 const Hero = () => {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(true);
+    setTimeout(() => setIsClicked(false), 2000);
+  };
 
   if (!t) return null;
 
@@ -27,16 +33,15 @@ const Hero = () => {
           {t.hero.title}
         </h1>
 
-        <a
-          href="https://api.whatsapp.com/send/?phone=351912030345"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-primary/90 hover:bg-primary text-white px-8 py-3 rounded-full
-            transition-all duration-300 transform hover:scale-105 active:scale-95
-            shadow-lg hover:shadow-xl"
+        <button
+          onClick={handleClick}
+          disabled={isClicked}
+          className={`px-8 py-3 rounded-full transition-all duration-300 transform
+            hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl
+            ${isClicked ? 'bg-gray-300 text-gray-700' : 'bg-primary/90 hover:bg-primary text-white'}`}
         >
-          {t.hero.button}
-        </a>
+          {isClicked ? 'Request Sent!' : t.hero.button}
+        </button>
       </div>
     </div>
   );
