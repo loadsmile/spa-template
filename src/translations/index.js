@@ -42,7 +42,7 @@ export const translations = {
     studio: {
       title: 'O Nosso Studio',
       subtitle: 'Um espaço pensado para você',
-      description: 'Nossa estrutura foi cuidadosamente planejada para proporcionar o máximo de conforto e tranquilidade durante sua experiência.',
+      description: 'O nosso studio foi cuidadosamente planeado para proporcionar o máximo de conforto e tranquilidade durante a sua experiência.',
       hours: {
         title: 'Horário de Funcionamento:',
         weekdays: 'Segunda a Sábado: 7h às 21h',
@@ -101,7 +101,9 @@ export const translations = {
             { duration: "60min", price: "49€" },
             { duration: "80min", price: "59€" }
           ],
-          image: "/images/massage.jpg"
+          image: "/images/massage.jpg",
+          loading: "lazy",
+          decoding: "async"
         },
         {
           title: "Limpeza de Pele Facial",
@@ -110,7 +112,9 @@ export const translations = {
             { duration: "60min", price: "65€" },
             { duration: "90min", price: "85€" }
           ],
-          image: "/images/facial.jpg"
+          image: "/images/facial.jpg",
+          loading: "lazy",
+          decoding: "async"
         },
         {
           title: "Head Spa",
@@ -120,7 +124,9 @@ export const translations = {
             { duration: "60min", price: "69€", subtitle: "Experiência Head Spa + Facial" },
             { duration: "90min", price: "89€", subtitle: "Experiência Head Spa + Facial + Massagem" }
           ],
-          image: "/images/hair.jpg"
+          image: "/images/hair.jpg",
+          loading: "lazy",
+          decoding: "async"
         }
       ]
     },
@@ -231,7 +237,9 @@ export const translations = {
             { duration: "60min", price: "49€" },
             { duration: "80min", price: "59€" }
           ],
-          image: "/images/massage.jpg"
+          image: "/images/massage.jpg",
+          loading: "lazy",
+          decoding: "async"
         },
         {
           title: "Facial Cleansing",
@@ -240,7 +248,9 @@ export const translations = {
             { duration: "60min", price: "65€" },
             { duration: "90min", price: "85€" }
           ],
-          image: "/images/facial.jpg"
+          image: "/images/facial.jpg",
+          loading: "lazy",
+          decoding: "async"
         },
         {
           title: "Head Spa",
@@ -250,7 +260,9 @@ export const translations = {
             { duration: "60min", price: "69€", subtitle: "Head Spa + Facial Experience" },
             { duration: "90min", price: "89€", subtitle: "Head Spa + Facial + Massage Experience" }
           ],
-          image: "/images/hair.jpg"
+          image: "/images/hair.jpg",
+          loading: "lazy",
+          decoding: "async"
         }
       ]
     },

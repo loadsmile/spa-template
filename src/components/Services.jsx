@@ -12,17 +12,23 @@ const Services = () => {
     {
       title: t.services.facial.shortTitle,
       image: "/images/facial.jpg",
-      alt: t.services.facial.imageAlt
+      alt: t.services.facial.imageAlt,
+      loading: "lazy",
+      decoding: "async"
     },
     {
       title: t.services.massage.shortTitle,
       image: "/images/back-massage.jpg",
-      alt: t.services.massage.imageAlt
+      alt: t.services.massage.imageAlt,
+      loading: "lazy",
+      decoding: "async"
     },
     {
       title: t.services.headSpa.shortTitle,
       image: "/images/hair.jpg",
-      alt: t.services.headSpa.imageAlt
+      alt: t.services.headSpa.imageAlt,
+      loading: "lazy",
+      decoding: "async"
     }
   ];
 
